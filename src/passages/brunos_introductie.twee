@@ -1,9 +1,17 @@
 :: Bruno's Introductie {"position":"2704,98","size":"100,100"}
-<<set $heeftAaiPhone to true>>
 
 /*Eerste ontmoeting.*/
 <<if visited("Bruno's Introductie") is 1>>
+<<script>>
+  $(document).one(':typingcomplete', function (e) {
+    State.setVar("$heeftAaiPhone", true);
+    UIBar.update();
+  });
+<</script>>
+
 <<type 40ms>>Gegroet, vreemdeling. Er staat je een grote uitdaging te wachten. De wereld is naar de kenker. Alleen jij kan het oplossen! Ben je er klaar voor? Ga snel terug naar huis, daar zul je de tijdmachine vinden... Als je het niet kan vinden, kom dan vooral nog eens langs. Als ik eens goed achter m'n oren krab, dan kom ik nog wel op een hint.<</type>>
+
+<<type 40ms>>Hier, neem deze Aaiphone. Dat zal helpen met je oriëntatie!<</type>>
 
 /*Wederontmoeting, eerste hint.*/
 <<elseif visited("Bruno's Introductie") is 2>>

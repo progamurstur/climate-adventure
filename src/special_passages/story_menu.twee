@@ -2,33 +2,24 @@
 <<link "Rugzak">>
   <<dialog "Rugzak">>
     <<for _i, _name range $inventory>>
-      <<print _name>> <<click "Gebruik">><</click>>
+      _name <<link "Gebruik">><</link>>
     <</for>>
   <</dialog>>
 <</link>>
 
 /*AaiPhone activeert als Bruno die heeft gegeven.*/
 <<if $heeftAaiPhone>>
-	<<click "AaiPhone">>
-		<<script>>
-			var dialog = Dialog.setup("AaiPhone");
-			Dialog.append("<em id='x'>hoi</em>");
-			// new Wikifier(dialog, Story.get("My Dialog Passage Name").processText());
-			$('#x').ariaClick(function (event){
-				Dialog.setup("Kaart");
-        setup.inventory.get();
-				Dialog.append("<a id='bur'>X</a>");
-				$("#bur").ariaClick(function (event){
-					Dialog.setup("test");
-					console.log(state.active.variables.inventory);
-					Dialog.append(state.active.variables.inventory.join(','));
-					Dialog.open();
-			});
-			Dialog.open();});
-			Dialog.open();
-		<</script>>
-	<</click>>
+	<<link "AaiPhone">>
+    <<dialog "AaiPhone">>
+      Wa wilde?
+      <<link "Kaart zien jonge">>
+        <<dialog "Kaart">>
+          Skon pixels jungske.
+          <<link "&#11178;">>
+            <<dialog "AaiPhone">>Hier is een probleem...<</dialog>>
+          <</link>>
+        <</dialog>>
+      <</link>>
+    <</dialog>>
+  <</link>>
 <</if>>
-
-
-
