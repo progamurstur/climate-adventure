@@ -1,5 +1,11 @@
 :: StoryMenu {"position":"0,112","size":"100,100"}
-[[Rugzak]] 
+<<link "Rugzak">>
+  <<dialog "Rugzak">>
+    <<for _i, _name range $inventory>>
+      <<print _name>> <<click "Gebruik">><</click>>
+    <</for>>
+  <</dialog>>
+<</link>>
 
 /*AaiPhone activeert als Bruno die heeft gegeven.*/
 <<if $heeftAaiPhone>>
@@ -10,11 +16,12 @@
 			// new Wikifier(dialog, Story.get("My Dialog Passage Name").processText());
 			$('#x').ariaClick(function (event){
 				Dialog.setup("Kaart");
+        setup.inventory.get();
 				Dialog.append("<a id='bur'>X</a>");
 				$("#bur").ariaClick(function (event){
 					Dialog.setup("test");
-					console.log(State.active.variables.inventory);
-					Dialog.append(State.active.variables.inventory.join(','));
+					console.log(state.active.variables.inventory);
+					Dialog.append(state.active.variables.inventory.join(','));
 					Dialog.open();
 			});
 			Dialog.open();});

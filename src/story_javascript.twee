@@ -1,55 +1,71 @@
 :: Story JavaScript [script]
-/*Begin code for inventory handling. Source: <https://twinery.org/wiki/twine2:add_an_inventory_system>*/
-/*Starting inventory.*/
-macros.initInv = {
-  handler: function(place, macroName, params, parser) {
-    state.active.variables.inventory = [];
-  }
-};
 
-/*Add item to inventory*/
-macros.addToInv = {
-  handler: function(place, macroName, params, parser) {
-    if (params.length == 0) {
-      throwError(place, "<<" + macroName + ">>: no parameters given");
-      return;
+/* Inventory definition. */
+const Inventory = {
+  contents: function () {
+    return State.variables.inventory
+  },
+  init: function () {
+    if (!State.variables.hasOwnProperty('inventory'))
+      State.variables.inventory = [];
+  },
+  add: function (item) {
+    if (this.contents().indexOf(item) === -1) {
+      this.contents().push(item);
     }
-    if (state.active.variables.inventory.indexOf(params[0]) == -1) {
-      state.active.variables.inventory.push(params[0]);
+  },
+  remove: function (item) {
+    var index = this.contents().indexOf(item);
+    if (index !== -1) {
+      this.contents().splice(index, 1);
     }
+  },
+  empty: function () {
+    this.contents() = [];
+  },
+  show: function () {
+    return this.contents().join(", ");
   }
-};
+}
 
-/*Remove item from inventory.*/
-macros.removeFromInv = {
-  handler: function(place, macroName, params, parser) {
-    if (params.length == 0) {
-      throwError(place, "<<" + macroName + ">>: no parameters given");
-      return;
-    }
-    var index = state.active.variables.inventory.indexOf(params[0]);
-    if (index != -1) {
-      state.active.variables.inventory.splice(index, 1);
-    }
+/* Bind the `Inventory` object onto the `setup` object which makes it
+ * available globally.
+ */ 
+
+setup.inventory = Inventory
+
+
+/* Macro definitions for inventory use.
+ * Inspiration from: <https://twinery.org/wiki/twine2:add_an_inventory_system>
+ */
+
+Macro.add('initInv', { handler: function () {
+  Inventory.init();
+}});
+
+Macro.add('addToInv', { handler: function () {
+  if (this.args.length === 0) {
+    return this.error(place, "<<" + this.name + ">>: no item to add was provided");
   }
-};
+  Inventory.add(this.args[0]);
+}});
 
-/*Display inventory items as list.*/
-macros.inv = {
-  handler: function(place, macroName, params, parser) {
-    if (state.active.variables.inventory.length == 0) {
-      new Wikifier(place, 'niets');
-    } else {
-      new Wikifier(place, state.active.variables.inventory.join(','));
-    }
+Macro.add('removeFromInv', { handler: function () {
+  if (this.args.length === 0) {
+    return this.error("<<" + this.name + ">>: no item to remote was provided");
   }
-};
+  Inventory.remove(this.args[0]);
+}});
 
-/*Empty entire inventory.*/
-macros.emptyInv = { 
-  handler: function(place, macroName, params, parser) {
-    state.active.variables.inventory = []
+Macro.add('emptyInv', { handler: function() {
+  Inventory.empty();
+}});
+
+Macro.add('inv', { handler: function () {
+  if (Inventory.contents.length === 0) {
+    new Wikifier(this.output, 'niets');
   }
-};
-
-/*End code for inventory handling.*/
+  else {
+    new Wikifier(this.output, setup.inventory.show());
+  }
+}});

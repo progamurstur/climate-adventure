@@ -7,5 +7,11 @@ Ga naar [[boven|Eerste verdieping 2040]]
 
 Haal even wat frisse lucht uit de [[tuin|Tuin 2040]]
 
+Pak dat <<link "worstenbroodje">><<addToInv "worstenbroodje">><</link>> op.
+Pak eens nog een <<link "worstenbroodje">><<addToInv "worstenbroodje">><</link>>.
+Pak dat <<link "chocopepernootje">><<addToInv "chocopepernootje">><</link>> ook maar.
+En die <<link "Pasundan rijsttafel">><<addToInv "pasundan">><</link>>...
 
+En flikker het worstenbroodje maar weer <<link "weg">><<removeFromInv "worstenbroodje">><</link>>...
 
+En de <<link "rest">><<emptyInv>><</link>> ook...
