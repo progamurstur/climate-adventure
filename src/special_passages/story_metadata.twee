@@ -1,0 +1,19 @@
+:: StoryTitle
+Nijmegen 1.0
+
+
+:: StoryData
+{
+	"ifid": "6A02D2F2-6805-4193-B8FE-B8F094D0EAB9",
+	"format": "SugarCube",
+	"format-version": "2.33.3",
+	"start": "Start",
+	"zoom": 0.6
+}
+
+
+:: StoryCaption {"position":"997,0","size":"100,100"}
+
+
+:: StoryAuthor {"position":"1104,4","size":"100,100"}
+Sterre van den Heuvel

@@ -1,0 +1,25 @@
+:: StoryMenu {"position":"0,112","size":"100,100"}
+<<link "Rugzak">>
+  <<dialog "Rugzak">>
+    <<for _i, _name range $inventory>>
+      _name <<link "Gebruik">><</link>>
+    <</for>>
+  <</dialog>>
+<</link>>
+
+/*AaiPhone activeert als Bruno die heeft gegeven.*/
+<<if $heeftAaiPhone>>
+	<<link "AaiPhone">>
+    <<dialog "AaiPhone">>
+      Wa wilde?
+      <<link "Kaart zien jonge">>
+        <<dialog "Kaart">>
+          Skon pixels jungske.
+          <<link "&#11178;">>
+            <<dialog "AaiPhone">>Hier is een probleem...<</dialog>>
+          <</link>>
+        <</dialog>>
+      <</link>>
+    <</dialog>>
+  <</link>>
+<</if>>

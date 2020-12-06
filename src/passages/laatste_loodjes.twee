@@ -1,0 +1,7 @@
+:: Laatste Loodjes {"position":"1003,2803","size":"100,100"}
+What is your score?
+<<textarea "$total_score" "">>
+[[Leg je laatste loodjes af|Tijdmachine Terugweg]]
+
+
+

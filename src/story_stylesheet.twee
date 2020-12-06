@@ -1,0 +1,72 @@
+:: Story Stylesheet [stylesheet]
+.home {
+  height: 100vp;
+  width: 100vp;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+
+/*Home page.*/
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 100px;
+  color: white;
+  font-style: bold;
+}
+
+.start_button {
+  font-family: 'Amatic SC', cursive;
+  font-size: 42px;
+  color: red;
+}
+
+.skyline {
+  width: 50vp;
+  height: 25vp;
+  max-width: 100%;
+  height: auto;
+}
+/*End Home page.*/
+
+
+/*UI bar.*/
+#menu ul {
+	margin: 1em 0 0;
+	padding: 0;
+	list-style: none;
+	border: 1px solid transparent;
+}
+#menu li a {
+	display: block;
+	padding: 0.25em 0.75em;
+	border: 1px solid transparent;
+  	border-radius: 8px;
+	color: #eee;
+	text-transform: uppercase;
+}
+
+#menu li a:hover {
+	background-color: #444;
+	border-color: #eee;
+  	border-radius: 8px;
+}
+
+#menu li:not(:first-child) {
+	border-top: none;
+}
+
+/*End UI bar.*/
+
+/*Add Google Fonts stylesheet to HTML code for Indie Flower.*/
+.handwriting {
+  color: black;
+  font-size: 24px;
+  font-family: Indie Flower;
+  display: inline-block;
+}
+
+
+

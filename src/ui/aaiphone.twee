@@ -1,0 +1,17 @@
+:: AaiPhone {"position":"185,215","size":"100,100"}
+/*Zorgt dat previous() de laatst bezochte passage in het verhaal is.*/
+<<if not $vorigePassage>>
+<<set $vorigePassage to previous()>>
+<</if>>
+
+/*Kaart is alleen in gebruik na het tijdreizen.*/
+<<if visited("Bos Passage") or visited("Stad Passage") or visited("Wijk Passage")>>
+[[KAART]]
+<</if>>
+
+[[HELP]]
+
+[[Terug|previous()][unset $vorigePassage]]
+
+
+

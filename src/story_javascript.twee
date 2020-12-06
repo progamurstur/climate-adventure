@@ -1,0 +1,71 @@
+:: Story JavaScript [script]
+
+/* Inventory definition. */
+const Inventory = {
+  contents: function () {
+    return State.variables.inventory
+  },
+  init: function () {
+    if (!State.variables.hasOwnProperty('inventory'))
+      State.variables.inventory = [];
+  },
+  add: function (item) {
+    if (this.contents().indexOf(item) === -1) {
+      this.contents().push(item);
+    }
+  },
+  remove: function (item) {
+    var index = this.contents().indexOf(item);
+    if (index !== -1) {
+      this.contents().splice(index, 1);
+    }
+  },
+  empty: function () {
+    this.contents() = [];
+  },
+  show: function () {
+    return this.contents().join(", ");
+  }
+}
+
+/* Bind the `Inventory` object onto the `setup` object which makes it
+ * available globally.
+ */ 
+
+setup.inventory = Inventory
+
+
+/* Macro definitions for inventory use.
+ * Inspiration from: <https://twinery.org/wiki/twine2:add_an_inventory_system>
+ */
+
+Macro.add('initInv', { handler: function () {
+  Inventory.init();
+}});
+
+Macro.add('addToInv', { handler: function () {
+  if (this.args.length === 0) {
+    return this.error(place, "<<" + this.name + ">>: no item to add was provided");
+  }
+  Inventory.add(this.args[0]);
+}});
+
+Macro.add('removeFromInv', { handler: function () {
+  if (this.args.length === 0) {
+    return this.error("<<" + this.name + ">>: no item to remote was provided");
+  }
+  Inventory.remove(this.args[0]);
+}});
+
+Macro.add('emptyInv', { handler: function() {
+  Inventory.empty();
+}});
+
+Macro.add('inv', { handler: function () {
+  if (Inventory.contents.length === 0) {
+    new Wikifier(this.output, 'niets');
+  }
+  else {
+    new Wikifier(this.output, setup.inventory.show());
+  }
+}});
