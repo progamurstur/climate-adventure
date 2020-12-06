@@ -1,0 +1,74 @@
+:: Story JavaScript [script]
+/*Begin code for inventory handling. Source: <https://twinery.org/wiki/twine2:add_an_inventory_system>*/
+/*Starting inventory.*/
+macros.initInv = {
+  handler: function(place, macroName, params, parser) {
+    state.active.variables.inventory = [];
+  }
+};
+
+/*Add item to inventory*/
+macros.addToInv = {
+  handler: function(place, macroName, params, parser) {
+    if (params.length == 0) {
+      throwError(place, "<<" + macroName + ">>: no parameters given");
+      return;
+    }
+    if (state.active.variables.inventory.indexOf(params[0]) == -1) {
+      state.active.variables.inventory.push(params[0]);
+    }
+  }
+};
+
+/*Remove item from inventory.*/
+macros.removeFromInv = {
+  handler: function(place, macroName, params, parser) {
+    if (params.length == 0) {
+      throwError(place, "<<" + macroName + ">>: no parameters given");
+      return;
+    }
+    var index = state.active.variables.inventory.indexOf(params[0]);
+    if (index != -1) {
+      state.active.variables.inventory.splice(index, 1);
+    }
+  }
+};
+
+/*Display inventory items as list.*/
+macros.inv = {
+  handler: function(place, macroName, params, parser) {
+    if (state.active.variables.inventory.length == 0) {
+      new Wikifier(place, 'niets');
+    } else {
+      new Wikifier(place, state.active.variables.inventory.join(','));
+    }
+  }
+};
+
+/*Empty entire inventory.*/
+macros.emptyInv = { 
+  handler: function(place, macroName, params, parser) {
+    state.active.variables.inventory = []
+  }
+};
+
+/*End code for inventory handling.*/
+
+
+:: Titelpagina [home] {"position":"1895,0","size":"100,100"}
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
+
+<div class="title">
+	Nimma 3.0
+</div>
+
+<div class="start_button">
+	[[Start|Woonkamer 2040]]
+</div>
+
+<div class="home_img_container">
+	<img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png">
+</div>
+
+
+

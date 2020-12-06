@@ -1,0 +1,23 @@
+:: Bruno's Introductie {"position":"2704,98","size":"100,100"}
+<<set $heeftAaiPhone to true>>
+
+/*Eerste ontmoeting.*/
+<<if visited("Bruno's Introductie") is 1>>
+<<type 40ms>>Gegroet, vreemdeling. Er staat je een grote uitdaging te wachten. De wereld is naar de kenker. Alleen jij kan het oplossen! Ben je er klaar voor? Ga snel terug naar huis, daar zul je de tijdmachine vinden... Als je het niet kan vinden, kom dan vooral nog eens langs. Als ik eens goed achter m'n oren krab, dan kom ik nog wel op een hint.<</type>>
+
+/*Wederontmoeting, eerste hint.*/
+<<elseif visited("Bruno's Introductie") is 2>>
+<<type 40ms>>Zo, terug voor een hint, neem ik aan? Even denken... Kijk nog maar eens op de eerste verdieping. De kast is niet wat het lijkt.<</type>>
+
+/*Wederontmoeting, tweede hint.*/
+<<elseif visited("Bruno's Introductie") is 3>>
+<<type 40ms>>Nóg een hint? Hmpff.. De kast is niet wat het lijkt... En, tja. Op de eerste verdieping dus. Probeer nog maar eens.<</type>>
+
+/*Wederontmoeting, geen hints meer.*/
+<<elseif visited("Bruno's Introductie") gte 4>>
+<<type 40ms>>Is het nog niet gelukt? Al m'n hints zijn op. BOVEN dus, misschien eens naar de kast kijken? Is dat een idee? *Had ik niet beter iemand anders kunnen vragen...?*<</type>>
+<</if>>
+[[Terug|Buurt 2040]]
+
+
+

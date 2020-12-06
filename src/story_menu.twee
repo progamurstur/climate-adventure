@@ -1,0 +1,27 @@
+:: StoryMenu {"position":"0,112","size":"100,100"}
+[[Rugzak]] 
+
+/*AaiPhone activeert als Bruno die heeft gegeven.*/
+<<if $heeftAaiPhone>>
+	<<click "AaiPhone">>
+		<<script>>
+			var dialog = Dialog.setup("AaiPhone");
+			Dialog.append("<em id='x'>hoi</em>");
+			// new Wikifier(dialog, Story.get("My Dialog Passage Name").processText());
+			$('#x').ariaClick(function (event){
+				Dialog.setup("Kaart");
+				Dialog.append("<a id='bur'>X</a>");
+				$("#bur").ariaClick(function (event){
+					Dialog.setup("test");
+					console.log(State.active.variables.inventory);
+					Dialog.append(State.active.variables.inventory.join(','));
+					Dialog.open();
+			});
+			Dialog.open();});
+			Dialog.open();
+		<</script>>
+	<</click>>
+<</if>>
+
+
+
