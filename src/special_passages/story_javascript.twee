@@ -53,22 +53,3 @@ macros.emptyInv = {
 };
 
 /*End code for inventory handling.*/
-
-
-:: Titelpagina [home] {"position":"1895,0","size":"100,100"}
-<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
-
-<div class="title">
-	Nimma 3.0
-</div>
-
-<div class="start_button">
-	[[Start|Woonkamer 2040]]
-</div>
-
-<div class="home_img_container">
-	<img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png">
-</div>
-
-
-

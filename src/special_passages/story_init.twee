@@ -14,6 +14,3 @@ Op een schaal van 0 tot 100, waarbij 0 onduurzaam is en 100 duurzaam.*/
 <<set $waterbesparing to 0>>
 
 <<addToInv "botje">>
-
-
-
