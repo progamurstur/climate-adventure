@@ -1,3 +1,5 @@
 :: Bureaulade {"position":"901,207","size":"100,100"}
-Double-click this passage to edit it.
+Een <<linkreplace "zaklamp!">>Je hebt de zaklamp opgepakt.<<addToInv "zaklamp">><</linkreplace>>
+
+[[Terug|Eerste verdieping 2040]]
 

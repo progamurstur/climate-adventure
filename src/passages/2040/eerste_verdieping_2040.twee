@@ -1,30 +1,33 @@
 :: Eerste verdieping 2040 {"position":"1051,200","size":"100,100"}
 /*Lange beschrijving.*/
 <<if visited() is 1>>\
-<<set $heeftZaklamp to false>>
-De hitte hierboven is bijna niet te houden. Omdat hitte stijgt, is het boven altijd heter. Het dak is ook nog eens zwart... Dat helpt zeker niet mee.
+De hitte hierboven is bijna niet te houden. Het is donker, de elektriciteit is uitgevallen. Ik zie bijna niets...
 
-Tegen de muur staat een bed en een bureau. Open een [[la|Bureaulade]] van het bureau.
+Tegen de muur staat een bed en een bureau. Open de [[la|Bureaulade]] van het bureau.
 
-<<if hasVisited("Bruno's Introductie")>>\
-Verder zie ik niets... Er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het [[behang|Achter de muur]].
+<<if hasVisited("Bruno's Introductie") and $inventory.includes("zaklamp")>>\
+Met de zaklamp kan ik nu wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. 
+
+Voel aan het [[behang|Achter de muur]].
 <</if>>
 <</if>>
 
 /*Korte beschrijving.*/
 <<if visited() gte 2 and not hasVisited("Bruno's Introductie")>>\
-Tegen de muur staat een bed en een bureau. <<if not $heeftZaklamp>>\
+Tegen de muur staat een bed en een bureau.
+
 Open de [[la|Bureaulade]] van het bureau.
-<</if>>
 <</if>>
 
 /*Korte beschrijving na bezoek aan Bruno.*/
-<<if visited() gte 2 and hasVisited("Bruno's Introductie")>>\
-Tegen de muur staat een bed en een bureau. <<if not $heeftZaklamp>>\
-Open de [[la|Bureaulade]] van het bureau.
-<</if>>
+<<if visited() gte 2 and hasVisited("Bruno's Introductie") and $inventory.includes("zaklamp")>>\
+Tegen de muur staat een bed en een bureau.
 
-Verder zie ik niets... Er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het [[behang|Achter de muur]].
+Open de [[la|Bureaulade]] van het bureau.
+
+Met de zaklamp kan ik nu wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. 
+
+Voel aan het [[behang|Achter de muur]].
 <</if>>
 
 [[Terug|Woonkamer 2040]]

@@ -277,7 +277,7 @@ const Inventory = {
     }
   },
   empty: function () {
-    this.contents() = [];
+    State.variables.inventory = [];
   },
   show: function () {
     return this.contents().join(", ");
@@ -324,7 +324,7 @@ Macro.add('inv', { handler: function () {
   else {
     new Wikifier(this.output, setup.inventory.show());
   }
-}});</script><tw-passagedata pid="1" name="Achter de muur" tags="" position="1301,279" size="100,100">Hè, de muur voelt ook heel dun, lijkt een gipsmuur. Klop klop &lt;&lt;linkappend &quot;klop...&quot;&gt;&gt;Grrrttt! De muur barst zo open! Trek één voor één er een stukje &lt;&lt;linkappend &quot;af&quot;&gt;&gt;, en nog een stukje... En nog &lt;&lt;linkappend &quot;één.&quot;&gt;&gt; Verrek! De [[tijdmachine|Tijdmachine Heenreis]]!!! 
+}});</script><tw-passagedata pid="1" name="Achter de muur" tags="" position="1301,279" size="100,100">Hè, de muur voelt inderdaad heel dun, lijkt wel een gipsmuur. Klop klop &lt;&lt;linkappend &quot;klop...&quot;&gt;&gt;Grrrttt! De muur barst zo open! Trek één voor één er een stukje &lt;&lt;linkappend &quot;af&quot;&gt;&gt;, en nog een stukje... En nog &lt;&lt;linkappend &quot;één.&quot;&gt;&gt; Verrek! De [[tijdmachine|Tijdmachine Heenreis]]!!! 
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Bruno&#39;s Introductie" tags="" position="2704,98" size="100,100">/*Eerste ontmoeting.*/
@@ -336,114 +336,103 @@ Macro.add('inv', { handler: function () {
   });
 &lt;&lt;/script&gt;&gt;
 
-&lt;&lt;type 40ms&gt;&gt;Gegroet, vreemdeling. Er staat je een grote uitdaging te wachten. De wereld is naar de kenker. Alleen jij kan het oplossen! Ben je er klaar voor? Ga snel terug naar huis, daar zul je de tijdmachine vinden... Als je het niet kan vinden, kom dan vooral nog eens langs. Als ik eens goed achter m&#39;n oren krab, dan kom ik nog wel op een hint.&lt;&lt;/type&gt;&gt;
+&lt;&lt;type 40ms&gt;&gt;Gegroet, vreemdeling. Wij hebben elkaar kort geleden gesproken over de ernst van de situatie. Er staat je een grote uitdaging te wachten. De wereld is in wanhopige toestand. Alleen jij kan het oplossen! Ben je er klaar voor? Ga snel terug naar huis, daar zul je de tijdmachine vinden... Als je het niet kan vinden, kom dan vooral nog eens langs. Als ik eens goed achter m&#39;n oren krab, dan kom ik daar nog wel een hint tegen...&lt;&lt;/type&gt;&gt;
 
 &lt;&lt;type 40ms&gt;&gt;Hier, neem deze Aaiphone. Dat zal helpen met je oriëntatie!&lt;&lt;/type&gt;&gt;
 
 /*Wederontmoeting, eerste hint.*/
 &lt;&lt;elseif visited(&quot;Bruno&#39;s Introductie&quot;) is 2&gt;&gt;
-&lt;&lt;type 40ms&gt;&gt;Zo, terug voor een hint, neem ik aan? Even denken... Kijk nog maar eens op de eerste verdieping. De kast is niet wat het lijkt.&lt;&lt;/type&gt;&gt;
+&lt;&lt;type 40ms&gt;&gt;Zo, terug voor een hint, neem ik aan? Even denken... Kijk nog maar eens op de eerste verdieping. De muren van je huis zijn erg dun en hol, er zitten nog wel eens lege ruimtes achter verborgen.&lt;&lt;/type&gt;&gt;
 
 /*Wederontmoeting, tweede hint.*/
 &lt;&lt;elseif visited(&quot;Bruno&#39;s Introductie&quot;) is 3&gt;&gt;
-&lt;&lt;type 40ms&gt;&gt;Nóg een hint? Hmpff.. De kast is niet wat het lijkt... En, tja. Op de eerste verdieping dus. Probeer nog maar eens.&lt;&lt;/type&gt;&gt;
+&lt;&lt;type 40ms&gt;&gt;Nóg een hint? Hmpff.. Tja. Op de eerste verdieping dus. De tijdmachine zit in de muur verstopt. Probeer nog maar eens.&lt;&lt;/type&gt;&gt;
 
 /*Wederontmoeting, geen hints meer.*/
 &lt;&lt;elseif visited(&quot;Bruno&#39;s Introductie&quot;) gte 4&gt;&gt;
-&lt;&lt;type 40ms&gt;&gt;Is het nog niet gelukt? Al m&#39;n hints zijn op. BOVEN dus, misschien eens naar de kast kijken? Is dat een idee? *Had ik niet beter iemand anders kunnen vragen...?*&lt;&lt;/type&gt;&gt;
+&lt;&lt;type 40ms&gt;&gt;Is het nog niet gelukt? Al m&#39;n hints zijn op. BOVEN dus, misschien eens een beetje op de muren kloppen? Is dat een idee? *Had ik niet beter iemand anders kunnen vragen...?*&lt;&lt;/type&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-[[Terug|Buurt 2040]]</tw-passagedata><tw-passagedata pid="3" name="Bureaulade" tags="" position="901,207" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Buurt 2040" tags="" position="2494,99" size="100,100">&lt;&lt;if visited(&quot;Bruno&#39;s Introductie&quot;)&gt;&gt;
+[[Terug|Buurt 2040]]</tw-passagedata><tw-passagedata pid="3" name="Bureaulade" tags="" position="901,207" size="100,100">Een &lt;&lt;linkreplace &quot;zaklamp!&quot;&gt;&gt;Je hebt de zaklamp opgepakt.&lt;&lt;addToInv &quot;zaklamp&quot;&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+
+[[Terug|Eerste verdieping 2040]]</tw-passagedata><tw-passagedata pid="4" name="Buurt 2040" tags="" position="2494,99" size="100,100">&lt;&lt;if visited(&quot;Bruno&#39;s Introductie&quot;)&gt;&gt;
 [[Praat nog eens met Bruno|Bruno&#39;s Introductie]]
+
 [[Loop terug je huis in|Woonkamer 2040]]
 &lt;&lt;else&gt;&gt;
 [[Wat zie ik daar, in de verte?|Bruno&#39;s Introductie]]
+
+[[Loop terug je huis in|Woonkamer 2040]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Eerste verdieping 2040" tags="" position="1051,200" size="100,100">/*Lange beschrijving.*/
 &lt;&lt;if visited() is 1&gt;&gt;\
-&lt;&lt;set $heeftZaklamp to false&gt;&gt;
-De hitte hierboven is bijna niet te houden. Omdat hitte stijgt, is het boven altijd heter. Het dak is ook nog eens zwart... Dat helpt zeker niet mee.
+De hitte hierboven is bijna niet te houden. Het is donker, de elektriciteit is uitgevallen. Ik zie bijna niets...
 
-Tegen de muur staat een bed en een bureau. Open een [[la|Bureaulade]] van het bureau.
+Tegen de muur staat een bed en een bureau. Open de [[la|Bureaulade]] van het bureau.
 
-&lt;&lt;if hasVisited(&quot;Bruno&#39;s Introductie&quot;)&gt;&gt;\
-Verder zie ik niets... Er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het [[behang|Achter de muur]].
+&lt;&lt;if hasVisited(&quot;Bruno&#39;s Introductie&quot;) and $inventory.includes(&quot;zaklamp&quot;)&gt;&gt;\
+Met de zaklamp kan ik nu wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. 
+
+Voel aan het [[behang|Achter de muur]].
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 /*Korte beschrijving.*/
 &lt;&lt;if visited() gte 2 and not hasVisited(&quot;Bruno&#39;s Introductie&quot;)&gt;&gt;\
-Tegen de muur staat een bed en een bureau. &lt;&lt;if not $heeftZaklamp&gt;&gt;\
+Tegen de muur staat een bed en een bureau.
+
 Open de [[la|Bureaulade]] van het bureau.
-&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
 /*Korte beschrijving na bezoek aan Bruno.*/
-&lt;&lt;if visited() gte 2 and hasVisited(&quot;Bruno&#39;s Introductie&quot;)&gt;&gt;\
-Tegen de muur staat een bed en een bureau. &lt;&lt;if not $heeftZaklamp&gt;&gt;\
+&lt;&lt;if visited() gte 2 and hasVisited(&quot;Bruno&#39;s Introductie&quot;) and $inventory.includes(&quot;zaklamp&quot;)&gt;&gt;\
+Tegen de muur staat een bed en een bureau.
+
 Open de [[la|Bureaulade]] van het bureau.
+
+Met de zaklamp kan ik nu wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. 
+
+Voel aan het [[behang|Achter de muur]].
 &lt;&lt;/if&gt;&gt;
 
-Verder zie ik niets... Er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het [[behang|Achter de muur]].
-&lt;&lt;/if&gt;&gt;
+[[Terug|Woonkamer 2040]]</tw-passagedata><tw-passagedata pid="6" name="Keuken 2040" tags="" position="1497,197" size="100,100">Het is zo warm, maar er komt geen water meer uit de kraan.
 
-[[Terug|Woonkamer 2040]]</tw-passagedata><tw-passagedata pid="6" name="Keuken 2040" tags="" position="1497,197" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="7" name="Tijdmachine Heenreis" tags="" position="1299,404" size="100,100">[[Ga naar de stad|Stad Passage]]
-[[Ga naar het bos|Bos Passage]]
-[[Blijf hier|Wijk Passage]]</tw-passagedata><tw-passagedata pid="8" name="Tuin 2040" tags="" position="2303,186" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Woonkamer 2040" tags="" position="1904,201" size="100,100">[[Loop naar buiten|Buurt 2040]]
+[[Terug|Woonkamer 2040]]</tw-passagedata><tw-passagedata pid="7" name="Tijdmachine Heenreis" tags="" position="1299,404" size="100,100">Je avontuur begint hier. Het is nu aan jou om het verleden te veranderen. De stad, de mensen en de dieren hebben jou nodig. Je wordt teruggebracht naar 2021... Waar wil je beginnen?
 
-Kijkje in de [[keuken...|Keuken 2040]]
+[[Ga naar de stad in 2021|Stad Passage]]
+[[Ga naar het bos in 2021|Bos Passage]]
+[[Blijf hier, in je eigen huis van 2021|Wijk Passage]]</tw-passagedata><tw-passagedata pid="8" name="Tuin 2040" tags="" position="2303,186" size="100,100">De lucht is alles behalve fris hier... Het is te benauwd en de lucht ruikt naar uitlaatgassen.
 
-Ga naar [[boven|Eerste verdieping 2040]]
+[[Terug|Woonkamer 2040]]</tw-passagedata><tw-passagedata pid="9" name="Woonkamer 2040" tags="" position="1904,201" size="100,100">Er wacht iemand buiten op je... [[Loop naar buiten|Buurt 2040]]
 
-Haal even wat frisse lucht uit de [[tuin|Tuin 2040]]
+Neem een kijkje in de [[keuken...|Keuken 2040]]
 
+Of ga naar [[boven|Eerste verdieping 2040]]
+
+Haal even wat frisse lucht in de [[tuin|Tuin 2040]]
+
+TEST voor het oppakken van items (check rugzak in het menu):
 Pak dat &lt;&lt;link &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;addToInv &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; op.
 Pak eens nog een &lt;&lt;link &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;addToInv &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;.
 Pak dat &lt;&lt;link &quot;chocopepernootje&quot;&gt;&gt;&lt;&lt;addToInv &quot;chocopepernootje&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; ook maar.
 En die &lt;&lt;link &quot;Pasundan rijsttafel&quot;&gt;&gt;&lt;&lt;addToInv &quot;pasundan&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;...
 
-En flikker het worstenbroodje maar weer &lt;&lt;link &quot;weg&quot;&gt;&gt;&lt;&lt;removeFromInv &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;...
+En gooi het worstenbroodje maar weer &lt;&lt;link &quot;weg&quot;&gt;&gt;&lt;&lt;removeFromInv &quot;worstenbroodje&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;...
 
-En de &lt;&lt;link &quot;rest&quot;&gt;&gt;&lt;&lt;emptyInv&gt;&gt;&lt;&lt;/link&gt;&gt; ook...</tw-passagedata><tw-passagedata pid="10" name="Aftiteling" tags="" position="921,3605" size="100,100">Muziek 					Luuk Linders
-						Daan
-						
-Geluidseffecten			Creative Commons
-	
-Game design				Sterre van den Heuvel
-
-Game development		Sterre van den Heuvel
-
-Script					Sterre van den Heuvel
-
-Onderzoek				Sterre van den Heuvel
-
-Grafische vormgeving 	Gil Vilhena de Oliveira
-						Sterre van den Heuvel
-						
-Consultant developer 	Bart Kleijngeld
-
-Begeleiding				Barbara Müller
-
-Met dank aan			Bart Kleijngeld
-						Barbara Müller
-						Bruno
-						Ton Verhoeven
-						Lydie van Santen
-						Nik Linders
-						Pim van den Heuvel
-						Gudrun ten Velde
-						Luuk Linders
-						Gil Vilhena de Oliveira
-						PvdD Fractie Nijmegen
-						Radboud Universiteit
-						Marlene Meyer
-						Jan Bransen
-						Twine</tw-passagedata><tw-passagedata pid="11" name="Bos Passage" tags="" position="690,500" size="100,100">[[Mariënbos]] 
+En de &lt;&lt;link &quot;rest&quot;&gt;&gt;&lt;&lt;emptyInv&gt;&gt;&lt;&lt;/link&gt;&gt; ook...</tw-passagedata><tw-passagedata pid="10" name="Laatste Loodjes" tags="" position="1003,2803" size="100,100">Wat is je score? (Vul een getal tussen de 0 en de 1000 in (incl.))
+&lt;&lt;textarea &quot;$total_score&quot; &quot;&quot;&gt;&gt;
+[[Leg je laatste loodjes af|Tijdmachine Terugweg]]</tw-passagedata><tw-passagedata pid="11" name="Scenario1" tags="" position="293,3299" size="100,100">Het werkt</tw-passagedata><tw-passagedata pid="12" name="Scenario2" tags="" position="802,3307" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Scenario3" tags="" position="1304,3300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Scenario4" tags="" position="1699,3295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Tijdmachine Terugweg" tags="" position="1003,2990" size="100,100">&lt;&lt;if $total_score gte 1000&gt;&gt;
+	[[Ga terug naar huis|Scenario1]]
+&lt;&lt;elseif $total_score lt 1000 and gte 750&gt;&gt;
+	[[Ga terug naar huis|Scenario2]]
+&lt;&lt;elseif $total_score lt 750 and gte 500&gt;&gt;
+	[[Ga terug naar huis|Scenario3]]
+&lt;&lt;elseif $total_score lt 500 and gte 250&gt;&gt;
+	[[Ga terug naar huis|Scenario4]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Bos Passage" tags="" position="690,500" size="100,100">[[Mariënbos]] 
 [[Hatertse en Overasseltse Vennen]] 
 [[Groesbeekse Bos]] 
 [[Ooijpolder]] 
 
-[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="12" name="Groesbeekse Bos" tags="" position="458,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Hatertse en Overasseltse Vennen" tags="" position="705,707" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Hunnerpark" tags="" position="1908,697" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Keuken" tags="" position="3196,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Kronenburgerpark" tags="" position="1403,699" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Laatste Loodjes" tags="" position="1003,2803" size="100,100">What is your score?
-&lt;&lt;textarea &quot;$total_score&quot; &quot;&quot;&gt;&gt;
-[[Leg je laatste loodjes af|Tijdmachine Terugweg]]</tw-passagedata><tw-passagedata pid="18" name="Mariënbos" tags="" position="903,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Ooijpolder" tags="" position="1199,706" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Scenario1" tags="" position="293,3299" size="100,100">Het werkt</tw-passagedata><tw-passagedata pid="21" name="Scenario2" tags="" position="802,3307" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="Scenario3" tags="" position="1304,3300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Scenario4" tags="" position="1699,3295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="Spiegelwaal" tags="" position="2505,707" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="25" name="Stad Passage" tags="" position="1898,502" size="100,100">[[Kronenburgerpark]] 
+[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="17" name="Groesbeekse Bos" tags="" position="458,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Hatertse en Overasseltse Vennen" tags="" position="705,707" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Mariënbos" tags="" position="903,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Ooijpolder" tags="" position="1199,706" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="Hunnerpark" tags="" position="1908,697" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="Kronenburgerpark" tags="" position="1403,699" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="Spiegelwaal" tags="" position="2505,707" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="Stad Passage" tags="" position="1898,502" size="100,100">[[Kronenburgerpark]] 
 [[Hunnerpark]] 
 [[Valkhof Park]] 
 [[Waalstrandje]] 
@@ -453,19 +442,12 @@ Met dank aan			Bart Kleijngeld
 
 Ga direct naar het einde
 
-[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="26" name="Tijdmachine Terugweg" tags="" position="1003,2990" size="100,100">&lt;&lt;if $total_score gte 1000&gt;&gt;
-	[[Ga terug naar huis|Scenario1]]
-&lt;&lt;elseif $total_score lt 1000 and gte 750&gt;&gt;
-	[[Ga terug naar huis|Scenario2]]
-&lt;&lt;elseif $total_score lt 750 and gte 500&gt;&gt;
-	[[Ga terug naar huis|Scenario3]]
-&lt;&lt;elseif $total_score lt 500 and gte 250&gt;&gt;
-	[[Ga terug naar huis|Scenario4]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Tuin" tags="" position="3498,502" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="Valkhof Park" tags="" position="1600,699" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Waal" tags="" position="2290,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Waalstrandje" tags="" position="2098,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="Wijk Passage" tags="" position="3195,507" size="100,100">[[Keuken]] 
+[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="25" name="Valkhof Park" tags="" position="1600,699" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Waal" tags="" position="2290,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Waalstrandje" tags="" position="2098,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="28" name="Keuken" tags="" position="3196,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="29" name="Tuin" tags="" position="3498,502" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="Wijk Passage" tags="" position="3195,507" size="100,100">[[Keuken]] 
 [[Woonkamer]] 
 [[Tuin]] 
 
-[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="32" name="Woonkamer" tags="" position="3400,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="Opening" tags="" position="350,475" size="100,100">Ver, ver weg, diep in het zuidoosten van Nederland, schuilt een verloren stad. Haar naam, is &#39;&#39;Nijmegen&#39;&#39;. Tientallen jaren geleden bruiste Nijmegen van leven en optimisme. De belofte van continue vooruitgang maakte de mensen blind voor wat er komen zou. Nu, in &#39;&#39;2040&#39;&#39;, is de wanhoop nabij. Onze stad, en al het leven daarin, krijgen het steeds &lt;&lt;linkappend &quot;benauwder…&quot;&gt;&gt;
+[[Laatste Loodjes]]</tw-passagedata><tw-passagedata pid="31" name="Woonkamer" tags="" position="3400,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="32" name="Aftiteling" tags="" position="921,3605" size="100,100">Credits, dankwoord.</tw-passagedata><tw-passagedata pid="33" name="Opening" tags="" position="350,475" size="100,100">[[Skip intro|Woonkamer 2040]]
+Ver, ver weg, diep in het zuidoosten van Nederland, schuilt een verloren stad. Haar naam, is &#39;&#39;Nijmegen&#39;&#39;. Tientallen jaren geleden bruiste Nijmegen van leven en optimisme. De belofte van continue vooruitgang maakte de mensen blind voor wat er komen zou. Nu, in &#39;&#39;2040&#39;&#39;, is de wanhoop nabij. Onze stad, en al het leven daarin, krijgen het steeds &lt;&lt;linkappend &quot;benauwder…&quot;&gt;&gt;
 
 Ik neem je mee terug in de tijd, ruim 2.000 jaar terug. Als Noviomagus, oftewel ‘nieuwe markt’, groeide de Romeinse handelsstad uit tot een prachtige, kansrijke omgeving. In de Middeleeuwen had Nijmegen een aanzienlijk stadscentrum en een haven. In de loop van de eeuwen die volgden, werd Nijmegen alsmaar groter… Rijker… &lt;&lt;linkappend &quot;Veeleisender…&quot;&gt;&gt;
 
@@ -485,7 +467,7 @@ Vandaag de dag dwalen de geesten van het verleden door de ruïnes van wat ooit o
 
 &#39;&#39;De natuur, dat zijn wij&#39;&#39;. Pas nu voelen wij dat, nu onze Aarde moe is, en terwijl ze sterft, neemt ze ons mee, de &#39;&#39;afgrond&#39;&#39; in. Hoe mooi het had kunnen &lt;&lt;linkappend &quot;zijn…&quot;&gt;&gt;
 
-Hier, neem zelf een [[kijkje…|Woonkamer 2040]]
+Hier, neem zelf een [[kijkje…|Woonkamer 2040]] In jouw huis.
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
