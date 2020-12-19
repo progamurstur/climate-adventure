@@ -18,7 +18,7 @@ Open de [[la|Bureaulade]] van het bureau.
 
 /*Als je de zaklamp hebt, kun je de muur beter bekijken.*/
 <<if $inventory.includes("zaklamp")>>
-<<linkreplace "Gebruik je zaklamp.">>Nu kan ik wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het <<linkappend "behang.">> Hè, de muur voelt inderdaad heel dun, lijkt wel een gipsmuur. Klop klop <<linkappend "klop...">>Grrrttt! De muur barst zo open! Trek één voor één er een stukje <<linkappend "af">>, en nog een stukje... En nog <<linkappend "één.">> Verrek! De [[tijdmachine|Tijdmachine bij de Waalbrug]]!!! 
+<<linkreplace "Gebruik je zaklamp.">>Nu kan ik wat meer zien... Raar, er zitten wat bobbels in het behang. Slecht afgewerkt. Voel aan het <<linkappend "behang.">> Hè, de muur voelt inderdaad heel dun, lijkt wel een gipsmuur. Klop klop <<linkappend "klop...">>Grrrttt! De muur barst zo open! Trek één voor één er een stukje <<linkappend "af">>, en nog een stukje... En nog <<linkappend "één.">> Verrek! De [[tijdmachine|Tijdmachine Heenreis]]!!! 
 <</linkappend>>
 <</linkappend>>
 <</linkappend>>
