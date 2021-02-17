@@ -1,7 +1,0 @@
-:: Laatste Loodjes {"position":"1003,2803","size":"100,100"}
-Wat is je score? (Vul een getal tussen de 0 en de 1000 in (incl.))
-<<textarea "$total_score" "">>
-[[Leg je laatste loodjes af|Tijdmachine Terugweg]]
-
-
-
