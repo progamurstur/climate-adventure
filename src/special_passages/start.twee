@@ -2,14 +2,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
 
 <div class="title">
-	Nimma 3.0
+	Climate adventure
 </div>
 
 <div class="start_button">
-	[[Start|Opening]]
+	[[Start nieuw spel|Buitenshuis]]
+	[[Laad spel]] /*Saves button.*/
+	[[Tutorial|Tutorial]]
+	[[Credits|Credits]]
 </div>
 
 <div class="home_img_container">
-	<img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png">
+	<!-- Klopt nog niet, maar gebruik $media_src ipv src=absolute/relative path. Nieuw:
+	<img class="skyline" src="$media_src/entree.png">
+	Oud: <img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png"> -->
 </div>
-

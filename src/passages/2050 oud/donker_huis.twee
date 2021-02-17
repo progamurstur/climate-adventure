@@ -1,0 +1,8 @@
+:: Donker huis
+
+*PLOP, alles is donker*
+
+Bruno: Wel verdrAAId, de elektriciteit is weer uitgevallen... $naam, geef me dat hout <<linkappend "aan.">>
+
+[[Pak het hout en geef het aan Bruno.|Kampvuur]]
+<</linkappend>>

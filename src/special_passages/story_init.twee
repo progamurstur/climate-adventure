@@ -13,4 +13,7 @@ Op een schaal van 0 tot 100, waarbij 0 onduurzaam is en 100 duurzaam.*/
 <<set $verontreiniging to 0>>
 <<set $energieneutraliteit to 0>>
 <<set $waterbesparing to 0>>
+
+/*Initialiseer overige variabelen.*/
 <<set $huidige_passage to passage()>>
+<<set $media_src to "file://C:/Users/Sterre/Documents/Twine/Verhalen/">>
