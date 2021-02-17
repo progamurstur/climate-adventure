@@ -522,16 +522,14 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="896,1" size="100,100">/*Initialize inventory.*/
 &lt;&lt;initInv&gt;&gt;
 
-/*Initialiseer variabalen, stats voor scenario&#39;s.
-Op een schaal van 0 tot 100, waarbij 0 onduurzaam is en 100 duurzaam.*/
-&lt;&lt;set $vergroening to 0&gt;&gt;
-&lt;&lt;set $hergebruik to 0&gt;&gt;
-&lt;&lt;set $co2neutraliteit to 0&gt;&gt;
-&lt;&lt;set $biodiversiteit to 0&gt;&gt;
-&lt;&lt;set $luchtkwaliteit to 0&gt;&gt;
-&lt;&lt;set $verontreiniging to 0&gt;&gt;
-&lt;&lt;set $energieneutraliteit to 0&gt;&gt;
-&lt;&lt;set $waterbesparing to 0&gt;&gt;
+/*Initialiseer variabalen voor achievements.*/
+&lt;&lt;set $achieve1 to false&gt;&gt;
+&lt;&lt;set $achieve2 to false&gt;&gt;
+&lt;&lt;set $achieve3 to false&gt;&gt;
+&lt;&lt;set $achieve4 to false&gt;&gt;
+&lt;&lt;set $achieve5 to false&gt;&gt;
+&lt;&lt;set $achieve6 to false&gt;&gt;
+&lt;&lt;set $achieve_bonus to false&gt;&gt;
 
 /*Initialiseer overige variabelen.*/
 &lt;&lt;set $huidige_passage to passage()&gt;&gt;
