@@ -1,12 +1,10 @@
-:: Tijdmachine Terugweg {"position":"1003,2990","size":"100,100"}
-<<if $total_score gte 1000>>
+:: Tijdmachine terugweg {"position":"1003,2990","size":"100,100"}
+<<if $thuis_finished is true and $stad_finished is false>>
 	[[Ga terug naar huis|Scenario1]]
-<<elseif $total_score lt 1000 and gte 750>>
+<<elseif $thuis_finished is false and $stad_finished is true>>
+	[[Ga terug naar huis|Scenario1]]
+<<elseif $thuis_finished is true and $stad_finished is true>>
 	[[Ga terug naar huis|Scenario2]]
-<<elseif $total_score lt 750 and gte 500>>
-	[[Ga terug naar huis|Scenario3]]
-<<elseif $total_score lt 500 and gte 250>>
-	[[Ga terug naar huis|Scenario4]]
 <</if>>
 
 

@@ -5,15 +5,13 @@
 	Climate adventure
 </div>
 
+<div class="home_img_container">
+	<img class="skyline" @src="$media_src+'img/entree.png'">
+</div>
+
 <div class="start_button">
 	[[Start nieuw spel|Buitenshuis]]
 	[[Laad spel]] /*Saves button.*/
 	[[Tutorial|Tutorial]]
 	[[Credits|Credits]]
-</div>
-
-<div class="home_img_container">
-	<!-- Klopt nog niet, maar gebruik $media_src ipv src=absolute/relative path. Nieuw:
-	<img class="skyline" src="$media_src/entree.png">
-	Oud: <img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png"> -->
 </div>
