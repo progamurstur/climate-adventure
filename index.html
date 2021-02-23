@@ -98,7 +98,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://6A02D2F2-6805-4193-B8FE-B8F094D0EAB9// --><tw-storydata name="Nijmegen 1.0" startnode="27" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="6A02D2F2-6805-4193-B8FE-B8F094D0EAB9" zoom="0.6" format="SugarCube" format-version="2.33.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.home {
+	<!-- UUID://6A02D2F2-6805-4193-B8FE-B8F094D0EAB9// --><tw-storydata name="Nijmegen 1.0" startnode="22" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="6A02D2F2-6805-4193-B8FE-B8F094D0EAB9" zoom="0.6" format="SugarCube" format-version="2.33.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.home {
   height: 100vp;
   width: 100vp;
   display: flex;
@@ -326,7 +326,7 @@ Macro.add('inv', { handler: function () {
   }
 }});</script><tw-passagedata pid="1" name="Start 2021" tags="" position="100,100" size="100,100">Waar wil je beginnen?
 
-[[Blijf in de stad.|Start stad]]
+[[Blijf in de stad.|Waal]]
 [[Ga naar huis.|Start thuis]]</tw-passagedata><tw-passagedata pid="2" name="Tijdmachine Terugweg" tags="" position="1003,2990" size="100,100">&lt;&lt;if $total_score gte 1000&gt;&gt;
 	[[Ga terug naar huis|Scenario1]]
 &lt;&lt;elseif $total_score lt 1000 and gte 750&gt;&gt;
@@ -335,44 +335,35 @@ Macro.add('inv', { handler: function () {
 	[[Ga terug naar huis|Scenario3]]
 &lt;&lt;elseif $total_score lt 500 and gte 250&gt;&gt;
 	[[Ga terug naar huis|Scenario4]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Groesbeekse Bos" tags="" position="458,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="4" name="Hatertse en Overasseltse Vennen" tags="" position="705,707" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="5" name="Mariënbos" tags="" position="903,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="Start bos" tags="" position="690,500" size="100,100">[[Mariënbos]] 
-[[Hatertse en Overasseltse Vennen]] 
-[[Groesbeekse Bos]] 
-[[Ooijpolder]]</tw-passagedata><tw-passagedata pid="7" name="Kronenburgerpark" tags="locatie" position="1403,699" size="100,100">Ook wel geinig parkje.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Ooijpolder" tags="" position="690,500" size="100,100">Hier is het dan: de NATUUR.
 
-Neem de fiets terug naar het [[Valkhof Park]].</tw-passagedata><tw-passagedata pid="8" name="Ooijpolder" tags="locatie" position="1199,706" size="100,100">Leuke koetjes lopen hier.
+Dat is nu nog leeg :-(.
 
-Neem een kijkje bij de [[Bisonbaai]].
+Dus keer maar weer om :-).
 
-Terug naar de [[tijdmachine|Tijdmachine bij de Waalbrug]].
+[[Keer om|Waalstrandje]].</tw-passagedata><tw-passagedata pid="4" name="Kronenburgerpark" tags="locatie" position="1403,699" size="100,100">Ook wel geinig parkje.
 
-Terug naar het [[Waalstrandje]].</tw-passagedata><tw-passagedata pid="9" name="Start stad" tags="locatie" position="1898,502" size="100,100">Je staat lekker uit te wapperen bij de Waal. Je tuurt over het vertrouwde watertje.
-
-Ten oosten zie je het [[Waalstrandje]].
-
-Neem een kijkje bij de [[Waal]].
-
-&lt;&lt;if hasVisited(&quot;Waalstrandje&quot;)&gt;&gt;
-Ten zuiden zie je het [[Valkhof Park]].
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Valkhof Park" tags="locatie" position="1600,699" size="100,100">Best aardig parkje.
+Neem de fiets terug naar het [[Valkhof Park]].</tw-passagedata><tw-passagedata pid="5" name="Valkhof Park" tags="locatie" position="1600,699" size="100,100">Best aardig parkje.
 
 Ten noordoosten ligt het [[Waalstrandje]].
 
 Ten noorden ligt de [[Waal]].
 
-Neem de fiets naar het [[Kronenburgerpark]].</tw-passagedata><tw-passagedata pid="11" name="Waal" tags="locatie" position="2290,702" size="100,100">De vrachtschepen brommen heen en weer. In de verte zie je het industrieterrein. 
+Neem de fiets naar het [[Kronenburgerpark]].</tw-passagedata><tw-passagedata pid="6" name="Waal" tags="locatie" position="1898,502" size="100,100">Je staat lekker uit te wapperen bij de Waal. Je tuurt over het vertrouwde watertje.
 
-De Waal is vies... Er drijft afval in. Kan dat niet anders?
+Ten oosten zie je het [[Waalstrandje]].
 
-[[Terug|previous()]]</tw-passagedata><tw-passagedata pid="12" name="Waalstrandje" tags="locatie" position="2098,704" size="100,100">Getverderrie er ligt hier overal plastic.
+&lt;&lt;if hasVisited(&quot;Waalstrandje&quot;)&gt;&gt;
+Ten zuiden zie je het [[Valkhof Park]].
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Waalstrandje" tags="locatie" position="2098,704" size="100,100">Getverderrie er ligt hier overal plastic.
 
-Wandel de [[Ooijpolder|Start natuur]] in.
+Wandel de [[Ooijpolder|Ooijpolder]] in. (Hier start de natuur-track)
 
-Loop naar het [[Valkhof Park]] of het [[Hunnerpark]].
+Loop naar het [[Valkhof Park]].
 
-Of neem een kijkje bij de [[Waal]].</tw-passagedata><tw-passagedata pid="13" name="Keuken" tags="" position="3196,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Start thuis" tags="" position="3195,507" size="100,100">[[Keuken]] 
+Of ga terug naar de [[Waal|Start stad]].</tw-passagedata><tw-passagedata pid="8" name="Keuken" tags="" position="3196,702" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="9" name="Start thuis" tags="" position="3195,507" size="100,100">[[Keuken]] 
 [[Woonkamer]] 
-[[Tuin]]</tw-passagedata><tw-passagedata pid="15" name="Tuin" tags="" position="3498,502" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Woonkamer" tags="" position="3400,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="Scenario1" tags="" position="293,3299" size="100,100">Het werkt</tw-passagedata><tw-passagedata pid="18" name="Scenario2" tags="" position="802,3307" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="Scenario3" tags="" position="1304,3300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Scenario4" tags="" position="1699,3295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="Buitenshuis" tags="" position="100,350" size="100,100">&lt;&lt;if hasVisited(&quot;Kampvuur&quot;) is false&gt;&gt;
+[[Tuin]]</tw-passagedata><tw-passagedata pid="10" name="Tuin" tags="" position="3498,502" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="11" name="Woonkamer" tags="" position="3400,704" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="12" name="Scenario1" tags="" position="293,3299" size="100,100">Het werkt</tw-passagedata><tw-passagedata pid="13" name="Scenario2" tags="" position="802,3307" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="14" name="Scenario3" tags="" position="1304,3300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Scenario4" tags="" position="1699,3295" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="Buitenshuis" tags="" position="725,225" size="100,100">&lt;&lt;if hasVisited(&quot;Kampvuur&quot;) is false&gt;&gt;
 Je staat onder de Waalbrug. Het regent, en het water staat hoog...
 
 In de verte brandt er licht bij iemand binnen...
@@ -380,63 +371,65 @@ In de verte brandt er licht bij iemand binnen...
 Ga het [[huis|Opening]] binnen.
 &lt;&lt;else&gt;&gt;
 Kijk daar in de pijler: de tijdmachine! [[Spring er snel in.|Tijdmachine heenreis]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Donker huis" tags="" position="225,350" size="100,100">*PLOP, alles is donker*
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Donker huis" tags="" position="850,225" size="100,100">*PLOP, alles is donker*
 
 Bruno: Wel verdrAAId, de elektriciteit is weer uitgevallen... $naam, geef me dat hout &lt;&lt;linkappend &quot;aan.&quot;&gt;&gt;
 
 [[Pak het hout en geef het aan Bruno.|Kampvuur]]
-&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Kampvuur" tags="" position="350,350" size="100,100">*Een kampvuur verlicht de kamer*
+&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Kampvuur" tags="" position="975,225" size="100,100">*Een kampvuur verlicht de kamer*
 
-&#39;&#39;Bruno:&#39;&#39; *Zucht*... Het is niet meer wat het geweest is... Vroeger was alles beter, &lt;&lt;linkappend &quot;anders...&quot;&gt;&gt;
+Bruno: *Zucht*... Het is niet meer wat het geweest is... Vroeger was alles beter, &lt;&lt;linkappend &quot;anders...&quot;&gt;&gt;
 
-&#39;&#39;Eend:&#39;&#39; Daar gaan we &lt;&lt;linkappend &quot;weer...&quot;&gt;&gt;
+Duif: Daar gaan we &lt;&lt;linkappend &quot;weer...&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; Vroeger, tientallen jaren geleden, was het hier zo slecht nog niet. In de jaren 20 woonde ik nog met mijn mensen in dit &lt;&lt;linkappend &quot;huis.&quot;&gt;&gt; 
+Bruno: Vroeger, tientallen jaren geleden, was het hier zo slecht nog niet. In de jaren 20 woonde ik nog met mijn mensen in dit &lt;&lt;linkappend &quot;huis.&quot;&gt;&gt; 
 Ja, de zomers werden warmer, maar de omstandigheden waren prima, meer dan prima &lt;&lt;linkappend &quot;zelfs.&quot;&gt;&gt;
 Maar de afgelopen decennia doofde onze Aarde langzaam uit. Verblind door de toekomst, hadden de mensen geen oog meer voor het nu. Werd het warmer, dan ging de airco vaker aan, of de zwembadjes vaker in de tuin. Maar onze uitgehongerde Aarde kon onze groei niet meer &lt;&lt;linkappend &quot;bijbenen.&quot;&gt;&gt;
 Mensen verbruikten steeds meer en meer. Vermoeid als de Aarde was, was er op een gegeven moment niets meer voor de mens om te &lt;&lt;linkappend &quot;gebruiken.&quot;&gt;&gt;
 
-&#39;&#39;Letterzetter:&#39;&#39; Of, te &lt;&lt;linkappend &quot;misbruiken!&quot;&gt;&gt;
+Letterzetter: Of, te &lt;&lt;linkappend &quot;misbruiken!&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; Juist. De zon brandde feller, de stormen waaiden heviger, de lucht maakte ons zieker. Er was niet meer genoeg eten voor &lt;&lt;linkappend &quot;iedereen.&quot;&gt;&gt; 
+Bruno: Juist. De zon brandde feller, de stormen waaiden heviger, de lucht maakte ons zieker. Er was niet meer genoeg eten voor &lt;&lt;linkappend &quot;iedereen.&quot;&gt;&gt; 
 Vanuit verschillende hoeken klonk protest. Overheid, industrie en burger probeerden het tij nog te keren, maar hun pogingen bleken te laat, en &lt;&lt;linkappend &quot;niet genoeg.&quot;&gt;&gt;
 Vanaf toen ging alles bergafwaarts. De omgeving is ondragelijk geworden voor al het leven, verscheurd door schaarste en conflict. We zijn verslagen door onze Aarde, of eigenlijk, door onze eigen &lt;&lt;linkappend &quot;wapens.&quot;&gt;&gt; 
 Vandaag de dag dwalen de geesten van het verleden door de ruïnes van de oude benedenstad. En sinds de Revolutie, &lt;&lt;linkappend &quot;dwalen wij hier ook.&quot;&gt;&gt;
 Voor de Revolutie raakte de stad overbevolkt, de drukte uit de Randstad was naar Nijmegen verhuisd. Tegelijkertijd werd het hitte niet te harden. De mensen trokken weg uit de binnenstad, en er bleven veel arme mensen &lt;&lt;linkappend &quot;achter.&quot;&gt;&gt;
 
-&#39;&#39;Letterzetter:&#39;&#39; En de dieren keerden &lt;&lt;linkappend &quot;terug!&quot;&gt;&gt;
+Letterzetter: En de dieren keerden &lt;&lt;linkappend &quot;terug!&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; Nadat mijn mensen naar het platteland waren vertrokken, besloot ik hier te blijven. De Revolutie van de Dieren was net &lt;&lt;linkappend &quot;op gang gekomen.&quot;&gt;&gt;
+Bruno: Nadat mijn mensen naar het platteland waren vertrokken, besloot ik hier te blijven. De Revolutie van de Dieren was net &lt;&lt;linkappend &quot;op gang gekomen.&quot;&gt;&gt;
 Ik zag kansen in de nieuwe manier van leven. Een nomade-leven, een kleine gemeenschap met andere achtergebleven dieren, op zoek naar &lt;&lt;linkappend &quot;een nieuw thuis.&quot;&gt;&gt;
 Sinds dien zwerf ik rond, samen met Eend en Letterzetter. Maar de omgeving is niet veelbelovend, er is veel &lt;&lt;linkappend &quot;verloren gegaan.&quot;&gt;&gt;
 
-&#39;&#39;Jij:&#39;&#39; &lt;&lt;linkappend &quot;En, hoe gaat dat?&quot;&gt;&gt;
+Jij: &lt;&lt;linkappend &quot;En, hoe gaat dat?&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; Niet... uitstekend. Met technologie hebben we meer mogelijkheden gekregen, maar een echt effectieve manier terug te vechten tegen het veranderende klimaat... Nee, dat hebben we &lt;&lt;linkappend &quot;nog niet voor elkaar.&quot;&gt;&gt;
+Bruno: Niet... uitstekend. Met technologie hebben we meer mogelijkheden gekregen, maar een echt effectieve manier terug te vechten tegen het veranderende klimaat... Nee, dat hebben we &lt;&lt;linkappend &quot;nog niet voor elkaar.&quot;&gt;&gt;
 Nu, tja... Het is eigenlijk te laat. Maar we werken aan een manier om terug &lt;&lt;linkappend &quot;te-&quot;&gt;&gt;
 
-&#39;&#39;Letterzetter:&#39;&#39; Bruno nee!!! Hoe weten we dat we $naam kunnen &lt;&lt;linkappend &quot;vertrouwen?&quot;&gt;&gt;
+Letterzetter: Bruno nee!!! Hoe weten we dat we $naam kunnen &lt;&lt;linkappend &quot;vertrouwen?&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; We hebben geen keus, Letterzetter. Wij kunnen het zelf niet doen, zoals wij nu zijn! Denk je dat een pratende hond in 2021 niet zal &lt;&lt;linkappend &quot;opvallen?&quot;&gt;&gt;
+Bruno: We hebben geen keus, Letterzetter. Wij kunnen het zelf niet doen, zoals wij nu zijn! Denk je dat een pratende hond in 2021 niet zal &lt;&lt;linkappend &quot;opvallen?&quot;&gt;&gt;
 
-&#39;&#39;Jij:&#39;&#39; &lt;&lt;linkappend &quot;Wat hebben jullie het over?!&quot;&gt;&gt;
+Jij: &lt;&lt;linkappend &quot;Wat hebben jullie het over?!&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; $naam, luister goed... Wij hebben een machine gemaakt. Een tijdmachine. De enige hoop die wij nog hebben, is het veranderen van het &lt;&lt;linkappend &quot;verleden.&quot;&gt;&gt;
+Bruno: $naam, luister goed... Wij hebben een machine gemaakt. Een tijdmachine. De enige hoop die wij nog hebben, is het veranderen van het &lt;&lt;linkappend &quot;verleden.&quot;&gt;&gt;
 Terwijl onze Aarde sterft, neemt ze ons mee, &lt;&lt;linkappend &quot;de afgrond in!&quot;&gt;&gt;
 $naam! Wij hebben jou &lt;&lt;linkappend &quot;nodig!&quot;&gt;&gt;
 
-&#39;&#39;Jij:&#39;&#39; &lt;&lt;linkappend &quot;I-ik? Maar wat kan ik doen?&quot;&gt;&gt;
+Jij: &lt;&lt;linkappend &quot;I-ik? Maar wat kan ik doen?&quot;&gt;&gt;
 
-&#39;&#39;Bruno:&#39;&#39; Gebruik de tijdmachine, ga voor ons terug in de tijd, en doe er alles aan het &lt;&lt;linkappend &quot;tij te keren!&quot;&gt;&gt;
+Bruno: Gebruik de tijdmachine, ga voor ons terug in de tijd, en doe er alles aan het &lt;&lt;linkappend &quot;tij te keren!&quot;&gt;&gt;
 
-&#39;&#39;Jij:&#39;&#39; &lt;&lt;linkappend &quot;Maar ik heb daar allemaal geen verstand van!!!&quot;&gt;&gt;
+Jij: &lt;&lt;linkappend &quot;Maar ik heb daar allemaal geen verstand van!!!&quot;&gt;&gt;
 
 *De regen buiten neemt toe*
 
-&#39;&#39;Bruno:&#39;&#39; Er is geen tijd te verliezen, $naam. Het water komt dichterbij, we moeten snel gaan. &lt;&lt;linkappend &quot;Luister goed!&quot;&gt;&gt;
+Bruno: Er is geen tijd te verliezen, $naam. Het water komt dichterbij, we moeten snel gaan. &lt;&lt;linkappend &quot;Luister goed!&quot;&gt;&gt;
 Ga naar buiten, in de pijler van de Waalbrug zit de tijdmachine verstopt. &lt;&lt;linkappend &quot;Haast je!&quot;&gt;&gt;
 
 *Het regent zo hard, dat de Waal is overstroomd. Het water loopt de kamer binnen, en het kampvuur dooft uit. De dieren verdwijnen in de duisternis*
+
+*... Je sokken zijn nat*
 
 Ga naar [[buiten|Buitenshuis]]
 
@@ -469,11 +462,11 @@ Ga naar [[buiten|Buitenshuis]]
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
-&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Opening" tags="" position="475,350" size="100,100">[[Skip intro|Woonkamer 2040]]
+&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Opening" tags="" position="1100,225" size="100,100">[[Skip intro|Start 2021]]
 
 Bruno: Sssst sttt!!! Er komt iemand BINNEN! Houd je &lt;&lt;linkappend &quot;snavel.&quot;&gt;&gt;
 
-Eend: Wie is &lt;&lt;linkappend &quot;daar?&quot;&gt;&gt;
+Duif: Wie is &lt;&lt;linkappend &quot;daar?&quot;&gt;&gt;
 
 Jij: &lt;&lt;linkappend &quot;Wie zijn jullie...?&quot;&gt;&gt;
 
@@ -481,7 +474,7 @@ Bruno: Wie wij zijn?! Dit is ons huis! Wie ben &lt;&lt;linkappend &quot;JIJ?&quo
 
 Jij: &lt;&lt;textarea &quot;$naam&quot; &quot;&quot; autofocus&gt;&gt; is mijn &lt;&lt;linkappend &quot;naam.&quot;&gt;&gt;
 
-Leta: Je lijkt niet op een &lt;&lt;linkappend &quot;$naam...&quot;&gt;&gt;
+Letterzetter: Je lijkt niet op een &lt;&lt;linkappend &quot;$naam...&quot;&gt;&gt;
 
 Bruno: Ze heeft gelijk, $naam. Je lijkt meer op een INBREKER! Verklaar je aanwezigheid, &lt;&lt;linkappend &quot;vreemdeling!&quot;&gt;&gt;
 
@@ -492,11 +485,11 @@ Jij: [[Het re-regende b-b-buiten, en ik zag licht bbrranden, i-ik-|Donker huis]]
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
-&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Tijdmachine heenreis" tags="" position="1299,404" size="100,100">Je avontuur begint hier. Het is nu aan jou om het verleden te veranderen. De stad, de mensen en de dieren hebben jou nodig. Je wordt teruggebracht naar 2021.
+&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Tijdmachine heenreis" tags="" position="1299,404" size="100,100">Je avontuur begint hier. Het is nu aan jou om het verleden te veranderen. De stad, de mensen en de dieren hebben jou nodig. Je wordt teruggebracht naar 2021.
 
-[[Start de tijdreis|Start 2021]]</tw-passagedata><tw-passagedata pid="26" name="PassageHeader" tags="" position="725,350" size="100,100">&lt;&lt;if tags(passage()).includes(&quot;locatie&quot;)&gt;&gt;
+[[Start de tijdreis|Start 2021]]</tw-passagedata><tw-passagedata pid="21" name="PassageHeader" tags="" position="100,350" size="100,100">&lt;&lt;if tags(passage()).includes(&quot;locatie&quot;)&gt;&gt;
 LOCATIE: &lt;&lt;= passage()&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Start" tags="home" position="1895,0" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt; 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Start" tags="home" position="1895,0" size="100,100">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt; 
 
 &lt;div class=&quot;title&quot;&gt;
 	Climate adventure
@@ -513,7 +506,7 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
 	&lt;!-- Klopt nog niet, maar gebruik $media_src ipv src=absolute/relative path. Nieuw:
 	&lt;img class=&quot;skyline&quot; src=&quot;$media_src/entree.png&quot;&gt;
 	Oud: &lt;img class=&quot;skyline&quot; src=&quot;file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png&quot;&gt; --&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="StoryInit" tags="" position="896,1" size="100,100">/*Initialize inventory.*/
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="StoryInit" tags="" position="896,1" size="100,100">/*Initialize inventory.*/
 &lt;&lt;initInv&gt;&gt;
 
 /*Initialiseer variabalen voor achievements.*/
@@ -527,7 +520,7 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
 
 /*Initialiseer overige variabelen.*/
 &lt;&lt;set $huidige_passage to passage()&gt;&gt;
-&lt;&lt;set $media_src to &quot;file://C:/Users/Sterre/Documents/Twine/Verhalen/&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="StoryMenu" tags="" position="0,112" size="100,100">&lt;&lt;link &quot;Rugzak&quot;&gt;&gt;
+&lt;&lt;set $media_src to &quot;file://C:/Users/Sterre/Documents/Twine/Verhalen/&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="StoryMenu" tags="" position="0,112" size="100,100">&lt;&lt;link &quot;Rugzak&quot;&gt;&gt;
   &lt;&lt;dialog &quot;Rugzak&quot;&gt;&gt;
     &lt;&lt;for _i, _name range $inventory&gt;&gt;
       _name &lt;&lt;link &quot;Gebruik&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -550,8 +543,8 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
       &lt;&lt;/link&gt;&gt;
     &lt;&lt;/dialog&gt;&gt;
   &lt;&lt;/link&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="StoryCaption" tags="" position="997,0" size="100,100"></tw-passagedata><tw-passagedata pid="31" name="StoryAuthor" tags="" position="1104,4" size="100,100">Sterre van den Heuvel</tw-passagedata><tw-passagedata pid="32" name="StoryShare" tags="" position="1205,2" size="100,100">&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprogamurstur.itch.io%2Fnimma-30&amp;src=sdkpreparse&amp;display=popup&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
-&lt;a href=&quot;https://twitter.com/intent/tweet?url=https%3A%2F%2Fprogamurstur.itch.io%2Fnimma-30&amp;text=Ik%20ben%20net%20uitgekomen%20op%20scenario%3A%20%24eindscenario.%20Aan%20welke%20toekomst%20wil%20jij%20werken%3F%20Red%20Nijmegen%20van%20de%20ondergang!&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;</tw-passagedata><tw-passagedata pid="33" name="AaiPhone" tags="" position="185,215" size="100,100">/*Zorgt dat previous() de laatst bezochte passage in het verhaal is.*/
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="StoryCaption" tags="" position="997,0" size="100,100"></tw-passagedata><tw-passagedata pid="26" name="StoryAuthor" tags="" position="1104,4" size="100,100">Sterre van den Heuvel</tw-passagedata><tw-passagedata pid="27" name="StoryShare" tags="" position="1205,2" size="100,100">&lt;a href=&quot;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fprogamurstur.itch.io%2Fnimma-30&amp;src=sdkpreparse&amp;display=popup&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;
+&lt;a href=&quot;https://twitter.com/intent/tweet?url=https%3A%2F%2Fprogamurstur.itch.io%2Fnimma-30&amp;text=Ik%20ben%20net%20uitgekomen%20op%20scenario%3A%20%24eindscenario.%20Aan%20welke%20toekomst%20wil%20jij%20werken%3F%20Red%20Nijmegen%20van%20de%20ondergang!&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt;</tw-passagedata><tw-passagedata pid="28" name="AaiPhone" tags="" position="185,215" size="100,100">/*Zorgt dat previous() de laatst bezochte passage in het verhaal is.*/
 &lt;&lt;if not $vorigePassage&gt;&gt;
 &lt;&lt;set $vorigePassage to previous()&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -563,13 +556,13 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
 
 [[HELP]]
 
-[[Terug|previous()][unset $vorigePassage]]</tw-passagedata><tw-passagedata pid="34" name="HELP" tags="" position="406,286" size="100,100">Klik op de linkjes in de tekst om voortgang te maken.
+[[Terug|previous()][unset $vorigePassage]]</tw-passagedata><tw-passagedata pid="29" name="HELP" tags="" position="406,286" size="100,100">Klik op de linkjes in de tekst om voortgang te maken.
 
 Kijk op de kaart om te zien waar je nu bent.
 
 Gebruik de links naar aangrenzende gebieden om de omgeving te verkennen.
 
-[[Terug|AaiPhone]]</tw-passagedata><tw-passagedata pid="35" name="KAART" tags="" position="404,107" size="100,100">Hoe maak je een game map, JS library: https://leafletjs.com/examples/crs-simple/crs-simple.html
+[[Terug|AaiPhone]]</tw-passagedata><tw-passagedata pid="30" name="KAART" tags="" position="404,107" size="100,100">Hoe maak je een game map, JS library: https://leafletjs.com/examples/crs-simple/crs-simple.html
 
 [[Terug|AaiPhone]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">

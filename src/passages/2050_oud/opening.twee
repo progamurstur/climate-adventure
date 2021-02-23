@@ -1,9 +1,9 @@
 :: Opening
-[[Skip intro|Woonkamer 2040]]
+[[Skip intro|Start 2021]]
 
 Bruno: Sssst sttt!!! Er komt iemand BINNEN! Houd je <<linkappend "snavel.">>
 
-Eend: Wie is <<linkappend "daar?">>
+Duif: Wie is <<linkappend "daar?">>
 
 Jij: <<linkappend "Wie zijn jullie...?">>
 
@@ -11,7 +11,7 @@ Bruno: Wie wij zijn?! Dit is ons huis! Wie ben <<linkappend "JIJ?">>
 
 Jij: <<textarea "$naam" "" autofocus>> is mijn <<linkappend "naam.">>
 
-Leta: Je lijkt niet op een <<linkappend "$naam...">>
+Letterzetter: Je lijkt niet op een <<linkappend "$naam...">>
 
 Bruno: Ze heeft gelijk, $naam. Je lijkt meer op een INBREKER! Verklaar je aanwezigheid, <<linkappend "vreemdeling!">>
 
