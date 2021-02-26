@@ -1,0 +1,8 @@
+:: Waal [locatie] {"position":"1898,502","size":"100,100"}
+Je staat lekker uit te wapperen bij de Waal. Je tuurt over het vertrouwde watertje.
+
+Ten oosten zie je het [[Waalstrandje]].
+
+<<if hasVisited("Waalstrandje")>>
+Ten zuiden zie je het [[Valkhof Park]].
+<</if>>

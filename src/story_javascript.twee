@@ -21,7 +21,7 @@ const Inventory = {
     }
   },
   empty: function () {
-    this.contents() = [];
+    State.variables.inventory = [];
   },
   show: function () {
     return this.contents().join(", ");

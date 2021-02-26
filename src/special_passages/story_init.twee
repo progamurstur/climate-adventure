@@ -1,15 +1,25 @@
 :: StoryInit {"position":"896,1","size":"100,100"}
 
-/*Initialize inventory.*/
+/*Initialiseer rugzak.*/
 <<initInv>>
 
-/*Initialiseer variabalen, stats voor scenario's.
-Op een schaal van 0 tot 100, waarbij 0 onduurzaam is en 100 duurzaam.*/
-<<set $vergroening to 0>>
-<<set $hergebruik to 0>>
-<<set $co2neutraliteit to 0>>
-<<set $biodiversiteit to 0>>
-<<set $luchtkwaliteit to 0>>
-<<set $verontreiniging to 0>>
-<<set $energieneutraliteit to 0>>
-<<set $waterbesparing to 0>>
+/*Initialiseer variabalen voor achievements.*/
+<<set $achieve1 to false>>
+<<set $achieve2 to false>>
+<<set $achieve3 to false>>
+<<set $achieve4 to false>>
+<<set $achieve5 to false>>
+<<set $achieve6 to false>>
+<<set $achieve_bonus to false>>
+
+/*Initialiseer variabelen voor behalen tracks.*/
+<<set $thuis_finished to false>>
+<<set $stad_finished to false>>
+<<set $natuur_finished to false>>
+
+/*Initialiseer variabele voor info-punten.*/
+<<set $info_punten to 0>>
+
+/*Initialiseer overige variabelen.*/
+<<set $huidige_passage to passage()>>
+<<set $media_src to "file://C:/Users/Sterre/Development/climate-adventure/media/">> <!--Verander naar relatief pad als het online komt-->

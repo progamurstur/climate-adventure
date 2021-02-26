@@ -1,0 +1,10 @@
+:: Buitenshuis
+<<if hasVisited("Kampvuur") is false>>
+Je staat onder de Waalbrug. Het regent, en het water staat hoog...
+
+In de verte brandt er licht bij iemand binnen...
+
+Ga het [[huis|Opening]] binnen.
+<<else>>
+Kijk daar in de pijler: de tijdmachine! [[Spring er snel in.|Tijdmachine heenreis]]
+<</if>>

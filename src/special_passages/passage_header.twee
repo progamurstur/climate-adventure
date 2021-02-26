@@ -1,0 +1,4 @@
+:: PassageHeader
+<<if tags(passage()).includes("locatie")>>
+LOCATIE: <<= passage()>>
+<</if>>

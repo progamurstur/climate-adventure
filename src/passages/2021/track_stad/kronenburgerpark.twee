@@ -1,0 +1,9 @@
+:: Kronenburgerpark [locatie] {"position":"1403,699","size":"100,100"}
+Ook wel geinig parkje.
+
+Neem de fiets terug naar het [[Valkhof Park]].
+
+<<if $achieve4 is true and $achieve5 is true and $achieve6 is true>>
+Of, als je klaar bent, ga terug naar de [[tijdmachine|Tijdmachine terugweg][$stad_finished to true]]
+<</if>>
+

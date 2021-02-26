@@ -1,0 +1,10 @@
+:: Scenario1 {"position":"293,3299","size":"100,100"}
+Beetje verandering!
+<<if $thuis_finished is true and $stad_finished is false>>
+[[Andere track|Waal]] nog doen?
+<<elseif $thuis_finished is false and $stad_finished is true>>
+[[Andere track|Start thuis]] nog doen?
+<</if>>
+
+
+

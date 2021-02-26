@@ -2,14 +2,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
 
 <div class="title">
-	Nimma 3.0
-</div>
-
-<div class="start_button">
-	[[Start|Opening]]
+	Climate adventure
 </div>
 
 <div class="home_img_container">
-	<img class="skyline" src="file://C:/Users/Sterre/Documents/Twine/Verhalen/entree.png">
+	<img class="skyline" @src="$media_src+'img/entree.png'">
 </div>
 
+<div class="start_button">
+	[[Start nieuw spel|Buitenshuis]]
+	[[Laad spel]] /*Saves button.*/
+	[[Tutorial|Tutorial]]
+	[[Credits|Credits]]
+</div>
