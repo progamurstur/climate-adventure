@@ -368,7 +368,9 @@ Of ga terug naar de [[Waal|Waal]].</tw-passagedata><tw-passagedata pid="8" name=
 [[Andere track|Waal]] nog doen?
 &lt;&lt;elseif $thuis_finished is false and $stad_finished is true&gt;&gt;
 [[Andere track|Start thuis]] nog doen?
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Scenario2" tags="" position="802,3307" size="100,100">Veel verandering! Yay!</tw-passagedata><tw-passagedata pid="14" name="Buitenshuis" tags="" position="475,225" size="100,100">&lt;&lt;if hasVisited(&quot;Kampvuur&quot;) is false&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Scenario2" tags="" position="802,3307" size="100,100">Veel verandering! Yay!</tw-passagedata><tw-passagedata pid="14" name="Buitenshuis" tags="" position="475,225" size="100,100">&lt;&lt;audio &quot;:test&quot; play loop&gt;&gt;
+&lt;&lt;audio &quot;begin_muziekje&quot; fadeto 1.0&gt;&gt;
+&lt;&lt;if hasVisited(&quot;Kampvuur&quot;) is false&gt;&gt;
 Je staat onder de Waalbrug. Het regent, en het water staat hoog...
 
 In de verte brandt er licht bij iemand binnen...
@@ -468,7 +470,7 @@ Ga naar [[buiten|Buitenshuis]]
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;
 &lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Opening" tags="" position="850,225" size="100,100">[[Skip intro|Start 2021]]
-
+&lt;&lt;audio &quot;tweede_muziekje&quot; fadeto 1.0&gt;&gt;
 Bruno: Sssst sttt!!! Er komt iemand BINNEN! Houd je &lt;&lt;linkappend &quot;snavel.&quot;&gt;&gt;
 
 Duif: Wie is &lt;&lt;linkappend &quot;daar?&quot;&gt;&gt;
@@ -531,7 +533,18 @@ LOCATIE: &lt;&lt;= passage()&gt;&gt;
 
 /*Initialiseer overige variabelen.*/
 &lt;&lt;set $huidige_passage to passage()&gt;&gt;
-&lt;&lt;set $media_src to &quot;file://C:/Users/Sterre/Development/climate-adventure/media/&quot;&gt;&gt; &lt;!--Verander naar relatief pad als het online komt--&gt;</tw-passagedata><tw-passagedata pid="22" name="StoryMenu" tags="" position="0,112" size="100,100">&lt;&lt;link &quot;Rugzak&quot;&gt;&gt;
+&lt;&lt;set $media_src to &quot;file://C:/Users/Sterre/Development/climate-adventure/media/&quot;&gt;&gt; &lt;!--Verander naar relatief pad als het online komt--&gt;
+
+/*Initialiseer audio.*/
+&lt;&lt;set _muziekje_2 = $media_src + &quot;/audio/01 - Arecibo.flac&quot;&gt;&gt;
+&lt;&lt;set _muziekje = $media_src + &quot;/audio/06 - Port of Nuba.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;begin_muziekje&quot; _muziekje&gt;&gt;
+&lt;&lt;cacheaudio &quot;tweede_muziekje&quot; _muziekje_2&gt;&gt;
+&lt;&lt;createaudiogroup &quot;:test&quot;&gt;&gt;
+	&lt;&lt;track &quot;begin_muziekje&quot;&gt;&gt;
+	&lt;&lt;track &quot;tweede_muziekje&quot;&gt;&gt;
+&lt;&lt;/createaudiogroup&gt;&gt;
+&lt;&lt;audio &quot;:test&quot; volume 0.0&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="StoryMenu" tags="" position="0,112" size="100,100">&lt;&lt;link &quot;Rugzak&quot;&gt;&gt;
   &lt;&lt;dialog &quot;Rugzak&quot;&gt;&gt;
     &lt;&lt;for _i, _name range $inventory&gt;&gt;
       _name &lt;&lt;link &quot;Gebruik&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;

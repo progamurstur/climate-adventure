@@ -23,3 +23,14 @@
 /*Initialiseer overige variabelen.*/
 <<set $huidige_passage to passage()>>
 <<set $media_src to "file://C:/Users/Sterre/Development/climate-adventure/media/">> <!--Verander naar relatief pad als het online komt-->
+
+/*Initialiseer audio.*/
+<<set _muziekje_2 = $media_src + "/audio/01 - Arecibo.flac">>
+<<set _muziekje = $media_src + "/audio/06 - Port of Nuba.mp3">>
+<<cacheaudio "begin_muziekje" _muziekje>>
+<<cacheaudio "tweede_muziekje" _muziekje_2>>
+<<createaudiogroup ":test">>
+	<<track "begin_muziekje">>
+	<<track "tweede_muziekje">>
+<</createaudiogroup>>
+<<audio ":test" volume 0.0>>

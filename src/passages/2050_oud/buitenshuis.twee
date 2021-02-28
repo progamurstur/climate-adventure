@@ -1,4 +1,6 @@
 :: Buitenshuis
+<<audio ":test" play loop>>
+<<audio "begin_muziekje" fadeto 1.0>>
 <<if hasVisited("Kampvuur") is false>>
 Je staat onder de Waalbrug. Het regent, en het water staat hoog...
 
